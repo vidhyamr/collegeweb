@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <form method="POST" action="{% url 'loginapp:next' %}">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="Enter your name" required><br>
+    <input type="date" name="dob" placeholder="DOB" required><br>
+    <input type="number" name="age" placeholder="Enter your age" required><br>
+   <label for="gender">Select your gender</label><br>
+    <label>
+    <input type="radio" name="gender" value="male">Male
+    </label>
+    <label>
+    <input type="radio" name="gender" value="female">Female
+    </label>
+        <input type="number" name="number" placeholder="Enter your phonenumber" required><br>
+        <input type="email" name="email" placeholder="Enter your email" required><br>
+        <textarea rows="4" cols="20" placeholder="Enter your address" required></textarea><br>
+
+
+
+  <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Department
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+
+        <li class="dropdown-submenu">
+                <a class="test" tabindex="-1" href="#">Arts<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+            <li class="dropdown-submenu">
+                    <a class="test" href="#">----Course---- <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">BA English</a></li>
+                    <li><a href="#">BA Malayalam</a></li>
+                    <li><a href="#">BA History</a></li>
+
+                </ul>
+
+                </ul>
+          </li>
+          </li>
+
+        <li class="dropdown-submenu">
+                <a class="test" tabindex="-1" href="#">Commerce<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+            <li class="dropdown-submenu">
+                    <a class="test" href="#">----Course---- <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">BBA</a></li>
+                    <li><a href="#">Bcom</a></li>
+                    <li><a href="#">MBA</a></li>
+
+                </ul>
+            </li>
+                </ul>
+        </li>
+            <li class="dropdown-submenu">
+                    <a class="test" tabindex="-1" href="#">Information Tech<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+            <li class="dropdown-submenu">
+                    <a class="test" href="#">----Course---- <span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+                        <li><a href="#">Bsc</a></li>
+                        <li><a href="#">BCA</a></li>
+                        <li><a href="#">MCA</a></li>
+                 </ul>
+            </li>
+                    </ul>
+            </li>
+        <li class="dropdown-submenu">
+                    <a class="test" tabindex="-1" href="#">Science<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+            <li class="dropdown-submenu">
+                    <a class="test" href="#">----Course---- <span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+                        <li><a href="#">Bsc Botany</a></li>
+                        <li><a href="#">Bsc Zoology</a></li>
+                        <li><a href="#">Msc Botany</a></li>
+                 </ul>
+            </li>
+                    </ul>
+        </li>
+        <li class="dropdown-submenu">
+                    <a class="test" tabindex="-1" href="#">Electronics<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+            <li class="dropdown-submenu">
+                    <a class="test" href="#">----Course---- <span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+                        <li><a href="#">Bsc Electronics</a></li>
+                        <li><a href="#">Msc Electronics</a></li>
+                 </ul>
+    </ul>
+  </div>
+
+
+
+
+<script>
+$(document).ready(function(){
+  $('.dropdown-submenu a.test').on("click", function(e){
+    $(this).next('ul').toggle();
+    e.stopPropagation();
+    e.preventDefault();
+  });
+});
+</script>
+
+
+
+      <label for="Purpose">Select your Purpose</label><br>
+    <select id="Purpose" name="Purpose">
+        <option value="none" selected>Purpose</option>
+        <option value="Exam">Exam</option>
+        <option value="Admission">Admission</option>
+        <option value="Visit">Visit</option>
+    </select>
+
+<p>Materials provide</p>
+      <input type="checkbox"name="mat" value="Book">Book
+      <input type="checkbox"name="mat" value="Pdf">Pdf
+      <input type="checkbox"name="mat" value="Pen">pen
+      <input type="checkbox"name="mat" value="Notes">Notes<br><br>
+      <input type="submit">
+
+
+        </form>
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </form>
+</body>
+</html>
